@@ -13,11 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - uses: actions/setup-python@v2
+    - name: pip
+      run: pip install --upgrade conan
+    - name: conan
+      run: conan install zlib/1.2.11@ --build always
