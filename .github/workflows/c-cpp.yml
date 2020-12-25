@@ -14,7 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
+    - uses: lukka/get-cmake@latest
     - name: pip
       run: pip install --upgrade conan
-    - name: conan
-      run: conan install zlib/1.2.11@ --build zlib
+    - name: cmake
+      run: cmake . && cmake --build .
