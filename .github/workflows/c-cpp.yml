@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -17,4 +17,4 @@ jobs:
     - name: pip
       run: pip install --upgrade conan
     - name: conan
-      run: conan install zlib/1.2.11@ --build always
+      run: conan install zlib/1.2.11@ --build zlib
