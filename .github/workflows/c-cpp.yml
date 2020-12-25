@@ -18,4 +18,4 @@ jobs:
     - name: pip
       run: pip install --upgrade conan
     - name: cmake
-      run: cmake . && cmake --build .
+      run: cmake -DCMAKE_BUILD_TYPE=Release . && cmake --build .
