@@ -11,7 +11,7 @@ endif()
 
 include(${CMAKE_BINARY_DIR}/conan.cmake)
 
-conan_cmake_run(REQUIRES zlib@1.2.11
+conan_cmake_run(REQUIRES zlib/1.2.11
                 BASIC_SETUP 
                 BUILD always)
 
