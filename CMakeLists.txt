@@ -13,7 +13,7 @@ include(${CMAKE_BINARY_DIR}/conan.cmake)
 
 conan_cmake_run(REQUIRES zlib/1.2.11
                 BASIC_SETUP 
-                BUILD always)
+                BUILD zlib)
 
 add_executable(main main.cpp)
 target_link_libraries(main ${CONAN_LIBS})
